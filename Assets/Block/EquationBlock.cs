@@ -34,9 +34,10 @@ public class EquationBlock : Block, ISelectable
     {
 
     }
-    public void Destroy()
+    public IEnumerator Destroy(float delay)
     {
-        Destroy(gameObject);   //TODO: add in animations from other game for block getting smaller.
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
 
     public void Deselect()
