@@ -24,13 +24,14 @@ public class EquationModel : MonoBehaviour {
             case 4:
                 Debug.Log("in equation setup");
                 equationArray = new List<string> { "Equation", "Equation", "Equation", "Equation",
-                                               "Equation", "Equation", "Equation", "Equation" };
+                                                   "Equation", "Equation", "Equation", "Equation" };
                 break;
             case 6:
                 equationArray = new List<string> { "Equation", "Equation", "Equation", "Equation",
-                                               "Equation", "Equation", "Equation", "Equation",
-                                               "Equation", "Equation", "Equation", "Equation",
-                                               "Equation", "Equation", "Equation", "Equation"};
+                                                   "Equation", "Equation", "Equation", "Equation",
+                                                   "Equation", "Equation", "Equation", "Equation",
+                                                   "Equation", "Equation", "Equation", "Equation",
+                                                   "Equation", "Equation"};
                 break;
             default: break;
         }

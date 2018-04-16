@@ -20,7 +20,7 @@ public class BlockManager : MonoBehaviour {
         if (SceneManager.GetActiveScene().name.Contains("4"))
             StartCoroutine(CreateBlockGrid(16));
         else
-            StartCoroutine(CreateBlockGrid(32));
+            StartCoroutine(CreateBlockGrid(36));
 
         equationBlocks = new List<EquationBlock>();
         answerBlocks = new List<AnswerBlock>();

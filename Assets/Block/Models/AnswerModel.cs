@@ -23,13 +23,14 @@ public class AnswerModel : MonoBehaviour {
             case 4:
                 Debug.Log("in answer setup");
                 answerArray = new List<string> { "2", "4", "6", "8",
-                                             "2", "4", "6", "8" };
+                                                "2", "4", "6", "8" };
                 break;
             case 6:
                 answerArray = new List<string> { "2", "4", "6", "8",
-                                             "10", "12", "14", "16",
-                                             "2", "4", "6", "8",
-                                             "10", "12", "14", "16"};
+                                                 "10", "12", "14", "16",
+                                                 "2", "4", "6", "8",
+                                                 "10", "12", "14", "16",
+                                                 "2", "4"};
                 break;
             default: break;
         }
