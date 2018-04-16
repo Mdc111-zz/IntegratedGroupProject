@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EquationModel : MonoBehaviour {
 
@@ -10,6 +11,10 @@ public class EquationModel : MonoBehaviour {
     private void Start()
     {
         instance = this;
+        if (SceneManager.GetActiveScene().name.Contains("4"))
+            SetupEquationArray(4);
+        else
+            SetupEquationArray(6);
     }
 
     public void SetupEquationArray(int gridsize)
@@ -17,6 +22,7 @@ public class EquationModel : MonoBehaviour {
         switch (gridsize)
         {
             case 4:
+                Debug.Log("in equation setup");
                 equationArray = new List<string> { "Equation", "Equation", "Equation", "Equation",
                                                "Equation", "Equation", "Equation", "Equation" };
                 break;
