@@ -21,7 +21,6 @@ public class AnswerModel : MonoBehaviour {
         switch (gridsize)
         {
             case 4:
-                Debug.Log("in answer setup");
                 answerArray = new List<string> { "2", "4", "6", "8",
                                                 "2", "4", "6", "8" };
                 break;

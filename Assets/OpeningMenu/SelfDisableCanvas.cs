@@ -6,7 +6,7 @@ public class SelfDisableCanvas : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Invoke("DisableCanvas", 1);
+        Invoke("DisableCanvas", 0.1f);
 	}
 	
 	// Update is called once per frame

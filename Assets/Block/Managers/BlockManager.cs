@@ -37,7 +37,6 @@ public class BlockManager : MonoBehaviour {
     public IEnumerator CreateBlockGrid(int gridSize)
     {
         yield return new WaitForSeconds(0.1f);
-        Debug.Log("in create block setup");
         for (int x = 0; x < gridSize / 2; x++)
         {
             BuildBlock(equationBlockPrefab);

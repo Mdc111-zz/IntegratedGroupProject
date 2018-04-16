@@ -22,7 +22,6 @@ public class EquationModel : MonoBehaviour {
         switch (gridsize)
         {
             case 4:
-                Debug.Log("in equation setup");
                 equationArray = new List<string> { "Equation", "Equation", "Equation", "Equation",
                                                    "Equation", "Equation", "Equation", "Equation" };
                 break;

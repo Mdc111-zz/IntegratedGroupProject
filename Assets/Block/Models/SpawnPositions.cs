@@ -27,7 +27,6 @@ public class SpawnPositions : MonoBehaviour {
         switch (gridsize)
         {
             case 4:
-                Debug.Log("in spawn pos setup");
                 gameGrid = new List<Vector3> { new Vector3(-1.5f, 1.5f, 0), new Vector3(-0.5f, 1.5f, 0), new Vector3(0.5f, 1.5f, 0), new Vector3(1.5f, 1.5f, 0),
                                            new Vector3(-1.5f, 0.5f, 0), new Vector3(-0.5f, 0.5f, 0), new Vector3(0.5f, 0.5f, 0), new Vector3(1.5f, 0.5f, 0),
                                            new Vector3(-1.5f, -0.5f, 0), new Vector3(-0.5f, -0.5f, 0), new Vector3(0.5f, -0.5f, 0), new Vector3(1.5f, -0.5f, 0),
