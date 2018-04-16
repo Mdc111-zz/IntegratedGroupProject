@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockManager : MonoBehaviour {
-    
+
+    public static BlockManager instance { get; private set; }
+
     GameObject equationBlockPrefab;
     GameObject answerBlockPrefab;
 
@@ -12,23 +15,30 @@ public class BlockManager : MonoBehaviour {
     List<AnswerBlock> answerBlocks;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
+        instance = this;
+        if (SceneManager.GetActiveScene().name.Contains("4"))
+            StartCoroutine(CreateBlockGrid(16));
+        else
+            StartCoroutine(CreateBlockGrid(32));
+
         equationBlocks = new List<EquationBlock>();
         answerBlocks = new List<AnswerBlock>();
 
         answerBlockPrefab = Resources.Load("Prefabs/AnswerBlock", typeof(GameObject)) as GameObject;
         equationBlockPrefab = Resources.Load("Prefabs/EquationBlock", typeof(GameObject)) as GameObject;
-        //CreateBlockPair(4);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
-    public void CreateBlockGrid(int gridSize)
+    public IEnumerator CreateBlockGrid(int gridSize)
     {
-        for(int x = 0; x < gridSize / 2; x++)
+        yield return new WaitForSeconds(0.1f);
+        Debug.Log("in create block setup");
+        for (int x = 0; x < gridSize / 2; x++)
         {
             BuildBlock(equationBlockPrefab);
             BuildBlock(answerBlockPrefab);
