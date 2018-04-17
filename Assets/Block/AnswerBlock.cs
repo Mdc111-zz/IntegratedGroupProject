@@ -33,7 +33,7 @@ public class AnswerBlock : Block, ISelectable
     }
     public void SetTextOfBlock()
     {
-
+        //TODO: make the text appear on gameobject
     }
     public IEnumerator Destroy(float delay)
     {
