@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnswerBlock : Block, ISelectable
 {
     public SpriteRenderer sprite;
+    //public Text blockText;
+    public GameObject meshTextTest;
     
     // Use this for initialization
     void Start () {
@@ -33,6 +36,10 @@ public class AnswerBlock : Block, ISelectable
     }
     public void SetTextOfBlock()
     {
+        meshTextTest.GetComponent<TextMesh>().transform.position = transform.position;
+        meshTextTest.GetComponent<TextMesh>().text = "hello";
+        //blockText.transform.LookAt(transform.position);
+        //blockText.text = GetAnswer();
         //TODO: make the text appear on gameobject
     }
     public IEnumerator Destroy(float delay)
