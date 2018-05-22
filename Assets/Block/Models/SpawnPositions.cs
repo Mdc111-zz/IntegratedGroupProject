@@ -8,38 +8,35 @@ public class SpawnPositions : MonoBehaviour {
     public static SpawnPositions instance { get; private set; }
     List<Vector3> gameGrid;
 
-    // Use this for initialization
-    void Start () {
+
+	void Start ()
+    {
+        Debug.Log("setting instance");
         instance = this;
-        if (SceneManager.GetActiveScene().name.Contains("4"))
-            SetupSpawnPositionArray(4);
-        else
+        if (SceneManager.GetActiveScene().name.Contains("6"))
             SetupSpawnPositionArray(6);
+        else
+            SetupSpawnPositionArray(4);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void SetupSpawnPositionArray(int gridsize)
     {
         switch (gridsize)
         {
             case 4:
-                gameGrid = new List<Vector3> { new Vector3(-1.5f, 1.5f, 0), new Vector3(-0.5f, 1.5f, 0), new Vector3(0.5f, 1.5f, 0), new Vector3(1.5f, 1.5f, 0),
-                                           new Vector3(-1.5f, 0.5f, 0), new Vector3(-0.5f, 0.5f, 0), new Vector3(0.5f, 0.5f, 0), new Vector3(1.5f, 0.5f, 0),
-                                           new Vector3(-1.5f, -0.5f, 0), new Vector3(-0.5f, -0.5f, 0), new Vector3(0.5f, -0.5f, 0), new Vector3(1.5f, -0.5f, 0),
-                                           new Vector3(-1.5f, -1.5f, 0), new Vector3(-0.5f, -1.5f, 0), new Vector3(0.5f, -1.5f, 0), new Vector3(1.5f, -1.5f, 0)
+                gameGrid = new List<Vector3> {
+                    new Vector3(-3f,  3f, 0), new Vector3(-1f,  3f, 0), new Vector3(1f,  3f, 0), new Vector3(3f,  3f, 0),
+                    new Vector3(-3f,  1f, 0), new Vector3(-1f,  1f, 0), new Vector3(1f,  1f, 0), new Vector3(3f,  1f, 0),
+                    new Vector3(-3f, -1f, 0), new Vector3(-1f, -1f, 0), new Vector3(1f, -1f, 0), new Vector3(3f, -1f, 0),
+                    new Vector3(-3f, -3f, 0), new Vector3(-1f, -3f, 0), new Vector3(1f, -3f, 0), new Vector3(3f, -3f, 0)
                 };
                 break;
             case 6:
-                gameGrid = new List<Vector3> {  new Vector3(-2.5f, 2.5f, 0), new Vector3(-1.5f, 2.5f, 0), new Vector3(-0.5f, 2.5f, 0), new Vector3(0.5f, 2.5f, 0), new Vector3(1.5f, 2.5f, 0), new Vector3(2.5f, 2.5f, 0),
-                                                new Vector3(-2.5f, 1.5f, 0), new Vector3(-1.5f, 1.5f, 0), new Vector3(-0.5f, 1.5f, 0), new Vector3(0.5f, 1.5f, 0), new Vector3(1.5f, 1.5f, 0), new Vector3(2.5f, 1.5f, 0),
-                                                new Vector3(-2.5f, 0.5f, 0), new Vector3(-1.5f, 0.5f, 0), new Vector3(-0.5f, 0.5f, 0), new Vector3(0.5f, 0.5f, 0), new Vector3(1.5f, 0.5f, 0), new Vector3(2.5f, 0.5f, 0),
-                                                new Vector3(-2.5f, -0.5f, 0), new Vector3(-1.5f, -0.5f, 0), new Vector3(-0.5f, -0.5f, 0), new Vector3(0.5f, -0.5f, 0), new Vector3(1.5f, -0.5f, 0), new Vector3(2.5f, -0.5f, 0),
-                                                new Vector3(-2.5f, -1.5f, 0), new Vector3(-1.5f, -1.5f, 0), new Vector3(-0.5f, -1.5f, 0), new Vector3(0.5f, -1.5f, 0), new Vector3(1.5f, -1.5f, 0), new Vector3(2.5f, -1.5f, 0),
-                                                new Vector3(-2.5f, -2.5f, 0), new Vector3(-1.5f, -2.5f, 0), new Vector3(-0.5f, -2.5f, 0), new Vector3(0.5f, -2.5f, 0), new Vector3(1.5f, -2.5f, 0), new Vector3(2.5f, -2.5f, 0)
+                gameGrid = new List<Vector3> {
+                    new Vector3(-5f,  3f, 0), new Vector3(-3f,  3f, 0), new Vector3(-1f,  3f, 0), new Vector3(1f,  3f, 0), new Vector3(3f,  3f, 0), new Vector3(5f,  3f, 0),
+                    new Vector3(-5f,  1f, 0), new Vector3(-3f,  1f, 0), new Vector3(-1f,  1f, 0), new Vector3(1f,  1f, 0), new Vector3(3f,  1f, 0), new Vector3(5f,  1f, 0),
+                    new Vector3(-5f, -1f, 0), new Vector3(-3f, -1f, 0), new Vector3(-1f, -1f, 0), new Vector3(1f, -1f, 0), new Vector3(3f, -1f, 0), new Vector3(5f, -1f, 0),
+                    new Vector3(-5f, -3f, 0), new Vector3(-3f, -3f, 0), new Vector3(-1f, -3f, 0), new Vector3(1f, -3f, 0), new Vector3(3f, -3f, 0), new Vector3(5f, -3f, 0)
                 };
                 break;
             default:

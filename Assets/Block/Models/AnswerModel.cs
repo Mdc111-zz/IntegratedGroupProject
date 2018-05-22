@@ -11,10 +11,10 @@ public class AnswerModel : MonoBehaviour {
     private void Start()
     {
         instance = this;
-        if (SceneManager.GetActiveScene().name.Contains("4"))
-            SetupAnswerArray(4);
-        else
+        if (SceneManager.GetActiveScene().name.Contains("6"))
             SetupAnswerArray(6);
+        else
+            SetupAnswerArray(4);
     }
     public void SetupAnswerArray(int gridsize)
     {
@@ -27,11 +27,11 @@ public class AnswerModel : MonoBehaviour {
             case 6:
                 answerArray = new List<string> { "2", "4", "6", "8",
                                                  "10", "12", "14", "16",
-                                                 "2", "4", "6", "8",
-                                                 "10", "12", "14", "16",
-                                                 "2", "4"};
+                                                 "2", "4", "6", "8"};
                 break;
-            default: break;
+            default:
+                answerArray = new List<string>();
+                break;
         }
     }
     public List<string> GetAnswerArray()

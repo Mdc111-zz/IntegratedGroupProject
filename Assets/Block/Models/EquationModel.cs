@@ -11,10 +11,10 @@ public class EquationModel : MonoBehaviour {
     private void Start()
     {
         instance = this;
-        if (SceneManager.GetActiveScene().name.Contains("4"))
-            SetupEquationArray(4);
-        else
+        if (SceneManager.GetActiveScene().name.Contains("6"))
             SetupEquationArray(6);
+        else
+            SetupEquationArray(4);
     }
 
     public void SetupEquationArray(int gridsize)
@@ -22,17 +22,17 @@ public class EquationModel : MonoBehaviour {
         switch (gridsize)
         {
             case 4:
-                equationArray = new List<string> { "Equation", "Equation", "Equation", "Equation",
+                equationArray = new List<string> { "2 + 2", "Equation", "Equation", "Equation",
                                                    "Equation", "Equation", "Equation", "Equation" };
                 break;
             case 6:
-                equationArray = new List<string> { "Equation", "Equation", "Equation", "Equation",
+                equationArray = new List<string> { "2 + 2", "Equation", "Equation", "Equation",
                                                    "Equation", "Equation", "Equation", "Equation",
-                                                   "Equation", "Equation", "Equation", "Equation",
-                                                   "Equation", "Equation", "Equation", "Equation",
-                                                   "Equation", "Equation"};
+                                                   "Equation", "Equation", "Equation", "Equation"};
                 break;
-            default: break;
+            default:
+                equationArray = new List<string>();
+                break;
         }
     }
     public List<string> GetEquationArray()
