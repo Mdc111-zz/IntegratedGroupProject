@@ -5,22 +5,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BlockManager : MonoBehaviour {
-
-    public static BlockManager instance { get; private set; }
-
+    
     GameObject equationBlockPrefab;
     GameObject answerBlockPrefab;
-
+    
     List<EquationBlock> equationBlocks;
     List<AnswerBlock> answerBlocks;
 
     // Use this for initialization
     void Start() {
-        instance = this;
-        if (SceneManager.GetActiveScene().name.Contains("4"))
-            StartCoroutine(CreateBlockGrid(16));
+
+        if (SceneManager.GetActiveScene().name.Contains("6"))
+            StartCoroutine(CreateBlockGrid(24));
         else
-            StartCoroutine(CreateBlockGrid(36));
+            StartCoroutine(CreateBlockGrid(16));
 
         equationBlocks = new List<EquationBlock>();
         answerBlocks = new List<AnswerBlock>();
@@ -28,11 +26,7 @@ public class BlockManager : MonoBehaviour {
         answerBlockPrefab = Resources.Load("Prefabs/AnswerBlock", typeof(GameObject)) as GameObject;
         equationBlockPrefab = Resources.Load("Prefabs/EquationBlock", typeof(GameObject)) as GameObject;
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    
 
     public IEnumerator CreateBlockGrid(int gridSize)
     {
@@ -47,6 +41,7 @@ public class BlockManager : MonoBehaviour {
     }
     void BuildBlock(GameObject prefab)
     {
+        Debug.Log("getting game grid");
         int randomSpawnPoint = Random.Range(0, SpawnPositions.instance.GetGameGrid().Count);
         Instantiate(prefab, SpawnPositions.instance.GetGameGrid()[randomSpawnPoint], Quaternion.identity);
         SpawnPositions.instance.RemoveAvaliblePosition(randomSpawnPoint);

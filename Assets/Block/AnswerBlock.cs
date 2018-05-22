@@ -6,18 +6,8 @@ using UnityEngine.UI;
 public class AnswerBlock : Block, ISelectable
 {
     public SpriteRenderer sprite;
-    //public Text blockText;
     public GameObject meshTextTest;
     
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-    }
     public string GetEquation()
     {
         return equation;
@@ -36,11 +26,7 @@ public class AnswerBlock : Block, ISelectable
     }
     public void SetTextOfBlock()
     {
-        meshTextTest.GetComponent<TextMesh>().transform.position = transform.position;
-        meshTextTest.GetComponent<TextMesh>().text = "hello";
-        //blockText.transform.LookAt(transform.position);
-        //blockText.text = GetAnswer();
-        //TODO: make the text appear on gameobject
+        meshTextTest.GetComponent<TextMesh>().text = GetAnswer().ToString();
     }
     public IEnumerator Destroy(float delay)
     {
