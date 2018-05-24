@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114433285926487140}
   - component: {fileID: 114700437078227112}
   - component: {fileID: 114212100210711378}
+  - component: {fileID: 114259597593254280}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -53,6 +54,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8f16119f45e0f4fa5e083deea6a64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114259597593254280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349158180236012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31f5efc11ae4864588bf302ef887651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 0}
 --- !u!114 &114433285926487140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,5 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc9b8a517aef9644affdbed1bf241c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blocksRemaining: 0
   equationBlocks: []
   answerBlocks: []

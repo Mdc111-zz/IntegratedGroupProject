@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1709903259735990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9147778, y: 2.353671, z: 0}
+  m_LocalPosition: {x: 3.2810607, y: 0.2896924, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 7}
   m_Children:
   - {fileID: 4662180265110808}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 212718882725140186}
-  meshTextTest: {fileID: 1501694036586598}
+  answerText: {fileID: 1501694036586598}
 --- !u!212 &212718882725140186
 SpriteRenderer:
   m_ObjectHideFlags: 1

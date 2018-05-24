@@ -32,6 +32,7 @@ public class AnswerBlock : Block, ISelectable
     {
         yield return new WaitForSeconds(delay);
         Destroy(gameObject);
+        BlockManager.Instance.blocksRemaining--;
     }
 
     public void Deselect()

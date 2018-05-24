@@ -9,6 +9,7 @@ public class BlockManager : MonoBehaviour {
     GameObject equationBlockPrefab;
     GameObject answerBlockPrefab;
     public static BlockManager Instance { get; private set; }
+    public int blocksRemaining;
 
 
     public List<EquationBlock> equationBlocks;
@@ -45,6 +46,7 @@ public class BlockManager : MonoBehaviour {
     }
     void BuildBlock(GameObject prefab)
     {
+        blocksRemaining++;
         int randomSpawnPoint = Random.Range(0, SpawnPositions.instance.GetGameGrid().Count);
         Instantiate(prefab, SpawnPositions.instance.GetGameGrid()[randomSpawnPoint], Quaternion.identity);
         SpawnPositions.instance.RemoveAvaliblePosition(randomSpawnPoint);
