@@ -21,8 +21,7 @@ GameObject:
   - component: {fileID: 4452072376825308}
   - component: {fileID: 114433285926487140}
   - component: {fileID: 114700437078227112}
-  - component: {fileID: 114325636761638378}
-  - component: {fileID: 114885138879947190}
+  - component: {fileID: 114212100210711378}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -43,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114325636761638378
+--- !u!114 &114212100210711378
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,15 +77,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equationBlocks: []
   answerBlocks: []
---- !u!114 &114885138879947190
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1349158180236012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31f5efc11ae4864588bf302ef887651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 0}

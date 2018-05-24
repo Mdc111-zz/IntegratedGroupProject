@@ -11,7 +11,6 @@ public class SpawnPositions : MonoBehaviour {
 
 	void Start ()
     {
-        Debug.Log("setting instance");
         instance = this;
         if (SceneManager.GetActiveScene().name.Contains("6"))
             SetupSpawnPositionArray(6);
