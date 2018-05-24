@@ -41,7 +41,6 @@ public class BlockManager : MonoBehaviour {
     }
     void BuildBlock(GameObject prefab)
     {
-        Debug.Log("getting game grid");
         int randomSpawnPoint = Random.Range(0, SpawnPositions.instance.GetGameGrid().Count);
         Instantiate(prefab, SpawnPositions.instance.GetGameGrid()[randomSpawnPoint], Quaternion.identity);
         SpawnPositions.instance.RemoveAvaliblePosition(randomSpawnPoint);
