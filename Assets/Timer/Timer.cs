@@ -9,6 +9,9 @@ public class Timer : MonoBehaviour
     public Text timerText;
     private float startTime;
     bool end = false;
+    float time;
+    string minutes;
+    string seconds;
 
     // Use this for initialization
     void Start()
@@ -22,16 +25,16 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float t = Time.time - startTime;
+         time = Time.time - startTime;
 
-        string minutes = ((int)t / 60).ToString();
-        string seconds = (t % 60).ToString("f2");
+         minutes = ((int)time / 60).ToString();
+         seconds = (time % 60).ToString("f2");
 
         timerText.text = minutes + ":" + seconds;
-
-        if (BlockManager.Instance.equationBlocks == null)
-        {
-            timerText.text = minutes;
-        }
+        
+    }
+    public float GetTime()
+    {
+        return time;
     }
 }

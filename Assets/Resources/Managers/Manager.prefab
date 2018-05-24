@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4452072376825308}
   - component: {fileID: 114433285926487140}
   - component: {fileID: 114700437078227112}
-  - component: {fileID: 114686899681664774}
+  - component: {fileID: 114325636761638378}
+  - component: {fileID: 114885138879947190}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -42,6 +43,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114325636761638378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349158180236012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e8f16119f45e0f4fa5e083deea6a64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114433285926487140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,17 +63,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00bfd4585af4a2a44a13ade0e1345615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114686899681664774
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1349158180236012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7abe422d3a146d94d9eac22b8940732d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114700437078227112
@@ -75,3 +76,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc9b8a517aef9644affdbed1bf241c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equationBlocks: []
+  answerBlocks: []
+--- !u!114 &114885138879947190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349158180236012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31f5efc11ae4864588bf302ef887651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
