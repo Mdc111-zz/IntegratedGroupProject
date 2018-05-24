@@ -18,8 +18,4 @@ public class Quit : MonoBehaviour {
     {
         Application.Quit();
     }
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

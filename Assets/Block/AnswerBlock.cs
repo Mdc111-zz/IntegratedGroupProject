@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AnswerBlock : Block, ISelectable
 {
     public SpriteRenderer sprite;
-    public GameObject meshTextTest;
+    public GameObject answerText;
     
     public string GetEquation()
     {
@@ -26,7 +26,7 @@ public class AnswerBlock : Block, ISelectable
     }
     public void SetTextOfBlock()
     {
-        meshTextTest.GetComponent<TextMesh>().text = GetAnswer().ToString();
+        answerText.GetComponent<TextMesh>().text = GetAnswer().ToString();
     }
     public IEnumerator Destroy(float delay)
     {
