@@ -8,12 +8,16 @@ public class BlockManager : MonoBehaviour {
     
     GameObject equationBlockPrefab;
     GameObject answerBlockPrefab;
-    
-    List<EquationBlock> equationBlocks;
-    List<AnswerBlock> answerBlocks;
+    public static BlockManager Instance { get; private set; }
+
+
+    public List<EquationBlock> equationBlocks;
+    public List<AnswerBlock> answerBlocks;
 
     // Use this for initialization
     void Start() {
+
+        Instance = this;
 
         if (SceneManager.GetActiveScene().name.Contains("6"))
             StartCoroutine(CreateBlockGrid(24));

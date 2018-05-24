@@ -21,13 +21,14 @@ public class AnswerModel : MonoBehaviour {
         switch (gridsize)
         {
             case 4:
-                answerArray = new List<string> { "2", "4", "6", "8",
-                                                "2", "4", "6", "8" };
+                answerArray = new List<string> { "4", "16", "3", "6",
+                                                "25", "110", "7", "9" };
                 break;
             case 6:
-                answerArray = new List<string> { "2", "4", "6", "8",
-                                                 "10", "12", "14", "16",
-                                                 "2", "4", "6", "8"};
+                answerArray = new List<string> { "28", "31", "52",
+                                                 "-4", "19", "40",
+                                                 "144", "81", "45",
+                                                 "8", "11", "7"};
                 break;
             default:
                 answerArray = new List<string>();

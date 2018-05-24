@@ -22,13 +22,15 @@ public class EquationModel : MonoBehaviour {
         switch (gridsize)
         {
             case 4:
-                equationArray = new List<string> { "2 + 2", "Equation", "Equation", "Equation",
-                                                   "Equation", "Equation", "Equation", "Equation" };
+                equationArray = new List<string> { "2 + 2", "9 + 7", "9 - 6", "20 - 14",
+                                                   "5 * 5", "11 * 10", "49 / 7", "27 / 3" };
                 break;
             case 6:
-                equationArray = new List<string> { "2 + 2", "Equation", "Equation", "Equation",
-                                                   "Equation", "Equation", "Equation", "Equation",
-                                                   "Equation", "Equation", "Equation", "Equation"};
+                equationArray = new List<string> { "11 + 17", "25 + 6", "37 + 14",
+                                                   "38 - 42", "31 - 12", "75 - 35",
+                                                   "12 * 12", "9 * 9", "5 * 9",
+                                                   "64 / 8", "55 / 5", "77 / 11"};
+
                 break;
             default:
                 equationArray = new List<string>();
